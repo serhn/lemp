@@ -15,7 +15,7 @@ cd lemp
 READY!)
 
 
-####PORTS:
+#### PORTS:
 
 MYSQL
 
@@ -38,7 +38,7 @@ SERVER: mailcatcher
 PORT: 1025
 
 
-####Directories will be created:
+#### Directories will be created:
 
 ./mysql - here is the mysql database(you can copy this directory for backup and transfer to another computer)
 
@@ -49,7 +49,7 @@ PORT: 1025
 ./ngnix/log - there are logs
 
 
-####To quickly create virtual hosts:
+#### To quickly create virtual hosts:
 
 ./virtual.sh (HOST) (php56 php71 php71dev) [addhost - optional for add /etc/hosts]
 
@@ -60,7 +60,7 @@ php71 - version of php 7.1 can be used in production
 
 php71dev - ersion for development, in php.ini turns mail into mailcatcher, additional packages are installed for development composer, git, node(v10.x), vim, mysql-client and other, for detals see Dockerfile 
 
-###Example:
+### Example:
 ```sh
 ./virtual.sh test_site php71dev addhost
 ```
