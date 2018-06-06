@@ -27,7 +27,8 @@ then
     docker cp -a $CONTAINER:/var/log/mysql ${MYSQL_LOCAL_DIR}/log
     docker cp -a $CONTAINER:/etc/mysql ${MYSQL_LOCAL_DIR}/etc
     echo "$IMAGE" > ${MYSQL_LOCAL_DIR}/README.txt
-    docker rm -f mysql
+    docker stop mysql
+    docker rm  mysql
 fi
 docker run -d \
     --restart unless-stopped  \
