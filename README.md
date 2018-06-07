@@ -1,6 +1,6 @@
-# DOCKER, Linux Ngnix PHP MYSQL(LEMP), phpmyadmin, mailcatcher
+# DOCKER, Linux Nginx PHP MYSQL(LEMP), phpmyadmin, mailcatcher
 
-A set of scripts is designed to quickly deploy the PHP-FRM development environment (different versions at 5.6 and 7.1 now), NGNIX, MYSQL 5.7
+A set of scripts is designed to quickly deploy the PHP-FRM development environment (different versions at 5.6 and 7.1 now), NGINX, MYSQL 5.7
 
 ## Installation and Startup
 
