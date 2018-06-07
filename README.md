@@ -8,7 +8,7 @@ You must have DOCKER installed on your computer, these scripts were tested on Li
 
 BEGIN INSTALLING:
 ```sh
-git clone git@github.com:serhn/lemp.git
+git clone https://github.com/serhn/lemp.git
 cd lemp
 ./restart_all.sh
 ```
