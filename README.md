@@ -13,6 +13,7 @@ add user gropup docker for exec
 ```sh
 sudo usermod -aG docker $USER
 ```
+restart terminal
 
 BEGIN INSTALLING:
 ```sh
