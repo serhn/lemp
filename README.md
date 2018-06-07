@@ -5,15 +5,7 @@ A set of scripts is designed to quickly deploy the PHP-FRM development environme
 ## Installation and Startup
 
 You must have DOCKER installed on your computer, these scripts were tested on Linux and MAС
-fast start docker for ubuntu
-```sh
-curl -sL https://raw.githubusercontent.com/serhn/lemp/master/tools/install_docker_ubuntu.sh | sudo -E bash -
-```
-add user gropup docker for exec
-```sh
-sudo usermod -aG docker $USER
-```
-relogin user
+
 
 BEGIN INSTALLING:
 ```sh
