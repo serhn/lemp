@@ -66,16 +66,14 @@ php71dev - ersion for development, in php.ini turns mail into mailcatcher, addit
 ./virtual.sh test_site php71dev addhost
 ```
 
-1:
-the root password will be requested to add
+1. the root password will be requested to add
 
 /etc/hosts 
 
 127.0.0.1	test_site
 
 
-2:
-will be created for nginx configuration
+2. will be created for nginx configuration
 
 ./ngnix/conf.d/test_site.conf
 
@@ -83,10 +81,8 @@ if something is wrong in this file, edit it, and then restart nginx
 
 ./run_30ngnix.sh
 
-3:
-create directories for the site and file index.php
+3. create directories for the site and file index.php
 
 ./ngnix/sites/test_site/public/index.php
 
-4:
-GO GO GO http://test_site/
+4. GO GO GO http://test_site/
