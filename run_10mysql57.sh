@@ -1,7 +1,7 @@
 #!/bin/sh
 . inc/init.sh
 CONTAINER="mysql"
-MYSQL_LOCAL_DIR="$PWD/mysql"
+MYSQL_LOCAL_DIR="$PWD/mysql57"
 IMAGE="mysql:5.7"
 MYSQL_PORT="3306"
 MYSQL_ROOT_PASSWORD="testo"

@@ -11,6 +11,8 @@ BEGIN INSTALLING:
 ```sh
 git clone https://github.com/serhn/lemp.git
 cd lemp
+cp inc/ignore_container.example inc/ignore_container
+#edit inc/ignore_container ignore container
 ./restart_all.sh
 ```
 READY!)
