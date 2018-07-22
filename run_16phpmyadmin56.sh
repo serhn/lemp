@@ -17,4 +17,4 @@ docker run -d \
        $LINKS \
        $IMAGE
 
-echo "http://localhost:$WWW_PORT  $CONTAINER"
+echo "${BLUE}http://localhost:$WWW_PORT${NC}  $CONTAINER"

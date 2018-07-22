@@ -9,4 +9,4 @@ docker run -d \
        --restart unless-stopped \
        $IMAGE
 
-echo "http://localhost:$WWW_PORT  $CONTAINER"
+echo "${BLUE}http://localhost:$WWW_PORT${NC}  $CONTAINER"
