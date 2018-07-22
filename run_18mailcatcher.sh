@@ -1,15 +1,12 @@
 #!/bin/sh
 . inc/init.sh
-IMAGE="phpmyadmin/phpmyadmin"
+IMAGE="schickling/mailcatcher"
 . inc/check_container.sh
-
-ADD_LINKS="mysql57:db" 
-check_link
-#echo $LINKS
-
+WWW_PORT="1080"
 docker run -d \
-           -p 8080:80 \
+           -p $WWW_PORT:1080 \
           --name $CONTAINER \
        --restart unless-stopped \
-       $LINKS \
        $IMAGE
+
+echo "http://localhost:$WWW_PORT  $CONTAINER"
