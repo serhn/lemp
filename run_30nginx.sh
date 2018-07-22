@@ -14,26 +14,17 @@ if [ ! -d $NGINX_LOCAL_DIR/conf.d ]; then
 	docker rm $CONTAINER
 fi
 
-PHP_LINKS=$(echo "$PHP_VERSION" | {
-	while read line; do
-		if [ -f ./inc/ignore_container ]; then
-			CHECK_IGNORE=$(cat ./inc/ignore_container | grep "^${line}$" | wc -l)
 
-			if [ "$CHECK_IGNORE" -eq "0" ]; then
-				PHP_LINKS=" ${PHP_LINKS} --link=${line} "
-			fi
-		else
-			PHP_LINKS=" ${PHP_LINKS} --link=${line} "
-		fi
-	done
-	echo $PHP_LINKS
-})
+
+ADD_LINKS="$PHP_VERSION" 
+check_link
+#echo $LINKS
 
 docker run -it -d \
 	--restart unless-stopped \
 	-v ${NGINX_LOCAL_DIR}/sites:/usr/share/nginx \
 	-v ${NGINX_LOCAL_DIR}/conf.d:/etc/nginx/conf.d \
 	-v ${NGINX_LOCAL_DIR}/log:/var/log/nginx \
-	$PHP_LINKS \
+	$LINKS \
 	--name="$CONTAINER" \
 	-p 80:80 $IMAGE

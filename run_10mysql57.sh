@@ -1,6 +1,6 @@
 #!/bin/sh
 . inc/init.sh
-CONTAINER="mysql"
+#CONTAINER="mysql"
 MYSQL_LOCAL_DIR="$PWD/mysql57"
 IMAGE="mysql:5.7"
 MYSQL_PORT="3306"
@@ -38,6 +38,3 @@ docker run -d \
      -v ${MYSQL_LOCAL_DIR}/etc:/etc/mysql  \
      -p ${MYSQL_PORT}:3306  \
         ${IMAGE}
-
-#     -v ${MYSQL_LOCAL_DIR}:/var/lib/mysql  \
-#echo "docker run -e MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD --restart unless-stopped --name=$CONTAINER  -d -p ${MYSQL_PORT}:3306  -v ${DB_PATH}:/var/lib/mysql  ${IMAGE}"
