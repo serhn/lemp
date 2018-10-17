@@ -19,10 +19,10 @@ DB_DIR="${PWD}/postgres105"
 #    -e "POSTGRES_DB=${POSTGRES_DB}" \
 #    ${IMAGE}
 #cp -a postgres105:/var/lib/postgresql/data postgres105
-if [ ! -d $DB_DIR  ]
-then
-    mkdir $DB_DIR
-fi
+#if [ ! -d $DB_DIR  ]
+#then
+#    mkdir $DB_DIR
+#fi
 docker run -d \
     --restart unless-stopped  \
     --name=$CONTAINER   \
@@ -30,7 +30,7 @@ docker run -d \
     -e "POSTGRES_PASSWORD=${POSTGRES_PASSWORD}" \
     -e "POSTGRES_USER=${POSTGRES_USER}" \
     -e "POSTGRES_DB=${POSTGRES_DB}" \
-    -v ${PWD}/postgres105:/var/lib/postgresql/data \
+    -v ${DB_DIR}:/var/lib/postgresql/data \
     ${IMAGE}
 echo "${BLUE}USER:${POSTGRES_USER}${NC}"
 echo "${BLUE}PASSWORD:${POSTGRES_PASSWORD}${NC}"
