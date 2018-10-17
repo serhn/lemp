@@ -2,7 +2,7 @@
 CONTAINER=$1
 if [ -z $CONTAINER ]
 then
-   CONTAINER="php71dev"
+   CONTAINER="php72dev"
    echo "EMPTY container set default $CONTAINER" >&2
    #exit;
 fi

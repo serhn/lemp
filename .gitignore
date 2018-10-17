@@ -1,6 +1,7 @@
 nginx
 ignore_container
 mysql*
+postgres105
 tmp
 *.swp
 .DS_Store

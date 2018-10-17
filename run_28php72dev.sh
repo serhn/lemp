@@ -3,7 +3,7 @@
 IMAGE=serh/docker-php72dev
 . inc/check_container.sh
 
-ADD_LINKS="mysql57:mysql mailcatcher" 
+ADD_LINKS="mysql57:mysql mailcatcher memcached" 
 check_link
 #echo $LINKS
 

@@ -17,10 +17,16 @@ fi
 
 
 ADD_LINKS="$PHP_VERSION" 
+#ADD_LINKS="php56  php71  php71dev  php72dev" 
+#echo $PHP_VERSION
 check_link
+# TMP LINKS
+#php56 php71 php71dev php72dev
+LINKS="--link=php56dev --link=php72dev --link=php71dev" 
+echo $LINKS
 #echo $LINKS
 
-docker run -it -d \
+docker run -it -d  \
 	--restart unless-stopped \
 	-v ${NGINX_LOCAL_DIR}/sites:/usr/share/nginx \
 	-v ${NGINX_LOCAL_DIR}/conf.d:/etc/nginx/conf.d \
