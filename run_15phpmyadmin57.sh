@@ -6,7 +6,7 @@ IMAGE="phpmyadmin/phpmyadmin"
 ADD_LINKS="mysql57:db" 
 check_link
 #echo $LINKS
-WWW_PORT="8080"
+WWW_PORT="8081"
 MYSQL_PORT="3306"
 
 docker run -d \

@@ -8,5 +8,5 @@ docker run -d \
           --name $CONTAINER \
        --restart unless-stopped \
        $IMAGE
-
+echo "SMTP -> HOST:mailcatcher PORT:1025i\n";
 echo "${BLUE}http://localhost:$WWW_PORT${NC}  $CONTAINER"

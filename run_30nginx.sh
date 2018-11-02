@@ -22,15 +22,20 @@ ADD_LINKS="$PHP_VERSION"
 check_link
 # TMP LINKS
 #php56 php71 php71dev php72dev
-LINKS="--link=php56dev --link=php72dev --link=php71dev" 
+#LINKS="--link=php56dev --link=php72dev --link=php71dev" 
+LINKS=" --link=php56dev --link=php71dev  --link=php72dev" 
 echo $LINKS
 #echo $LINKS
 
-docker run -it -d  \
+docker run -itd  \
 	--restart unless-stopped \
 	-v ${NGINX_LOCAL_DIR}/sites:/usr/share/nginx \
 	-v ${NGINX_LOCAL_DIR}/conf.d:/etc/nginx/conf.d \
 	-v ${NGINX_LOCAL_DIR}/log:/var/log/nginx \
 	$LINKS \
 	--name="$CONTAINER" \
-	-p 80:80 $IMAGE
+	-p 80:80 \
+	-p 701:701 \
+	-p 801:801 \
+	-p 901:901 \
+        $IMAGE

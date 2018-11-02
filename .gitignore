@@ -1,6 +1,6 @@
-nginx
+/nginx
 ignore_container
-mysql*
+/mysql*
 postgres105
 tmp
 *.swp
