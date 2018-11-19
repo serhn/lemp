@@ -8,5 +8,6 @@ docker run  -d \
             --restart unless-stopped  \
             --name="$CONTAINER" \
             $LINKS \
+            -e TZ=Europe/Kiev \
             -v ${NGINX_LOCAL_DIR}/sites:/usr/share/nginx \
             $IMAGE

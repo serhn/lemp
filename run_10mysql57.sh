@@ -35,6 +35,7 @@ docker run -d \
      -v ${MYSQL_LOCAL_DIR}/db:/var/lib/mysql  \
      -v ${MYSQL_LOCAL_DIR}/log:/var/log/mysql  \
      -v ${MYSQL_LOCAL_DIR}/etc:/etc/mysql  \
+     -e TZ=Europe/Kiev \
      -p ${MYSQL_PORT}:3306  \
         ${IMAGE}
 

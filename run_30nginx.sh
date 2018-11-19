@@ -33,6 +33,7 @@ docker run  -itd \
 	-v ${NGINX_LOCAL_DIR}/conf.d:/etc/nginx/conf.d \
 	-v ${NGINX_LOCAL_DIR}/log:/var/log/nginx \
 	$LINKS \
+        -e TZ=Europe/Kiev \
 	--name="$CONTAINER" \
 	-p 80:80 \
         $IMAGE
