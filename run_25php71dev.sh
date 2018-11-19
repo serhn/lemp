@@ -4,8 +4,8 @@ IMAGE=serh/docker-php71dev
 
 
 
-ADD_LINKS="mysql57:mysql mailcatcher memcached" 
-check_link
+LINKS=" --link=mysql57:mysql --link=mailcatcher " 
+#check_link
 echo $LINKS
 
 docker run  -d \
