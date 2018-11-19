@@ -1,12 +1,11 @@
 #!/bin/sh
 . inc/init.sh
 IMAGE="node"
-. inc/check_container.sh
 
 
 
 #php56 php71 php71dev php72dev
-LINKS="--link=mysql:mysql57" 
+#LINKS="--link=mysql:mysql57" 
 #echo $LINKS
 #echo $LINKS
 

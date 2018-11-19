@@ -1,7 +1,6 @@
 #!/bin/sh
 . inc/init.sh
 IMAGE="phpmyadmin/phpmyadmin"
-. inc/check_container.sh
 
 ADD_LINKS="mysql57:db" 
 check_link

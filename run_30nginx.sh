@@ -1,7 +1,6 @@
 #!/bin/sh
 . inc/init.sh
 IMAGE="nginx"
-. inc/check_container.sh
 if [ ! -d $NGINX_LOCAL_DIR/conf.d ]; then
 	mkdir $NGINX_LOCAL_DIR
 	docker run --name="$CONTAINER" -d -p 80:80 $IMAGE
@@ -36,6 +35,6 @@ docker run -itd  \
 	--name="$CONTAINER" \
 	-p 80:80 \
 	-p 701:701 \
-	-p 801:801 \
+	-p 81:81 \
 	-p 901:901 \
         $IMAGE

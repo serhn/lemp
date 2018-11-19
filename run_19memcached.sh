@@ -1,8 +1,6 @@
 #!/bin/sh
 . inc/init.sh
 IMAGE=memcached
-. inc/check_container.sh
-
 
 
 #ADD_LINKS="memcache php56" 

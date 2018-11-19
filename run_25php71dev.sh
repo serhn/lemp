@@ -1,7 +1,6 @@
 #!/bin/sh
 . inc/init.sh
 IMAGE=serh/docker-php71dev
-. inc/check_container.sh
 
 
 

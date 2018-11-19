@@ -5,7 +5,6 @@ MYSQL_LOCAL_DIR="$PWD/mysql56"
 IMAGE="mysql:5.6"
 MYSQL_PORT="3306"
 MYSQL_ROOT_PASSWORD="testo"
-. inc/check_container.sh
 if [ ! -d $MYSQL_LOCAL_DIR  ]
 then
     #echo -n "Enter mysql ROOT PASSWORD: "

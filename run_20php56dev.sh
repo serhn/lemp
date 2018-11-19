@@ -1,7 +1,6 @@
 #!/bin/sh
 . inc/init.sh
 IMAGE=serh/docker-php56dev
-. inc/check_container.sh
 
 ADD_LINKS="mysql56:mysql" 
 check_link

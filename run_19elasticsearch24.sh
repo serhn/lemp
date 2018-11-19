@@ -1,8 +1,6 @@
 #!/bin/sh
 . inc/init.sh
 IMAGE=elasticsearch:2.4
-. inc/check_container.sh
-
 
 
 ADD_LINKS="php56" 

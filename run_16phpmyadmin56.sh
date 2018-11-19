@@ -1,10 +1,9 @@
 #!/bin/sh
 . inc/init.sh
 IMAGE="phpmyadmin/phpmyadmin"
-. inc/check_container.sh
 
 ADD_LINKS="mysql56:db" 
-check_link
+#check_link
 #echo $LINKS
 WWW_PORT="8081"
 MYSQL_PORT="3307"
