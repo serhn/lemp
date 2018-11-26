@@ -3,7 +3,6 @@
 IMAGE=serh/docker-php71
 
 ADD_LINKS="mysql57:mysql" 
-check_link
 #echo $LINKS
 
 docker run  -d \
