@@ -9,6 +9,6 @@ check_link
 docker run  -d \
             --restart unless-stopped  \
             --name="$CONTAINER" \
-            $LINKS \
+            $ADD_LINKS \
             -v ${NGINX_LOCAL_DIR}/sites:/usr/share/nginx \
              $IMAGE
