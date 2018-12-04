@@ -1,5 +1,5 @@
 #!/bin/sh
-CONTAINER="mysql_mag"
+#CONTAINER="mysql_mag"
 . inc/init.sh
 #MYSQL_LOCAL_DIR="$PWD/mysql57"
 MYSQL_LOCAL_DIR="$PWD/mysql56"
