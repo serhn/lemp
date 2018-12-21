@@ -42,6 +42,7 @@ docker run -d \
      -v ${MYSQL_LOCAL_DIR}/db:/var/lib/mysql  \
      -v ${MYSQL_LOCAL_DIR}/log:/var/log/mysql  \
      -v ${MYSQL_LOCAL_DIR}/etc:/etc/mysql  \
+     -p ${DB_PORT}:3306 \
      -e TZ=${TZ} \
         ${IMAGE}
 echo "${BLUE}DB:${DB_BASE}${NC}"

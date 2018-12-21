@@ -1,6 +1,6 @@
 #!/bin/sh
 . inc/init.sh
-IMAGE="node"
+IMAGE="node:8-jessie"
 
 
 
@@ -12,6 +12,8 @@ IMAGE="node"
 #	$LINKS \
 docker run -it -d  \
 	--restart unless-stopped \
-	-v ${NGINX_LOCAL_DIR}/sites:/home/node \
+	-v ${PWD}/../:/home/node \
 	--name="$CONTAINER" \
-	-p 3000:3000 $IMAGE
+	-p 3000:3000 \
+	-p 8085:8800 \
+	-p 35729:35729 $IMAGE
