@@ -10,6 +10,6 @@ echo $LINKS
 
 docker run  -d \
             --restart unless-stopped  \
-            --name="$CONTAINER" \
+            --name="redis-cache" \
             $LINKS \
             $IMAGE
