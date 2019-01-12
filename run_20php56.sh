@@ -2,8 +2,7 @@
 . inc/init.sh
 IMAGE=serh/docker-php56
 
-ADD_LINKS="mysql57:mysql" 
-check_link
+LINKS="--link=mysql57:mysql" 
 #echo $LINKS
 
 docker run  -d \

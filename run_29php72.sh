@@ -2,12 +2,12 @@
 . inc/init.sh
 IMAGE=serh/docker-php72
 
-ADD_LINKS="mysql57:mysql" 
-#echo $LINKS
 docker run  -d \
             --restart unless-stopped  \
             --name="$CONTAINER" \
-            $LINKS \
+            --link mysql57:mysql \
+            --link redis \
             -e TZ=Europe/Kiev \
+            -v ${PWD}/inc/php72.ini:/usr/local/etc/php/php.ini \
             -v ${NGINX_LOCAL_DIR}/sites:/usr/share/nginx \
             $IMAGE

@@ -6,4 +6,4 @@ then
    echo "EMPTY container set default $CONTAINER" >&2
    #exit;
 fi
-docker exec -it $CONTAINER bash
+docker exec -it $CONTAINER bash 
